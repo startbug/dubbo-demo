@@ -1,7 +1,9 @@
 package com.ggs.service.impl;
 
+import com.ggs.pojo.User;
 import com.ggs.service.UserService;
 import org.apache.dubbo.config.annotation.Service;
+
 
 /**
  * @Author lianghaohui
@@ -14,6 +16,12 @@ public class UserServiceImpl implements UserService {
 
     public String sayHello() {
         return "hello dubboaaassssssssssss~ !";
+    }
+
+    @Override
+    public User findUserById(int id) {
+        User user = new User(1, "lisi", "123456");
+        return user;
     }
 
 }

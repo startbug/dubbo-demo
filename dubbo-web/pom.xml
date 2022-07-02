@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>5.1.7.RELEASE</spring.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
         <dubbo.version>2.7.4.1</dubbo.version>
         <zookeeper.version>4.0.0</zookeeper.version>
     </properties>
@@ -78,16 +78,6 @@
 
     <build>
         <plugins>
-            <!-- tomcat插件 -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <port>9000</port>
-                    <path>/</path>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

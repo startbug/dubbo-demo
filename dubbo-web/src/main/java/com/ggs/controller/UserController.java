@@ -1,8 +1,8 @@
 package com.ggs.controller;
 
+import com.ggs.pojo.User;
 import com.ggs.service.UserService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +27,13 @@ public class UserController {
 
     @GetMapping("/sayHello")
     public String sayHello() {
+        System.out.println("你好啊啊啊啊啊啊啊啊");
         return userService.sayHello();
+    }
+
+    @GetMapping("/find")
+    public User find(int id) {
+        return userService.findUserById(id);
     }
 
 }
